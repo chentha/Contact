@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Contact</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(16, 16, 16);
+            max-width: 100%;
+            height: auto;
+            margin: auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Poppins,sans-serif;
+        }
+        .container1{
+            max-width: 1600px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .box_resume{
+            text-align: center;
+            margin-top: 65px;
+        }
+        .box_resume span{
+            font-size: 95px;
+            font-weight: 800;
+            color: hsla(0,0%,100%,.07);
+            letter-spacing: 10px;
+            line-height: .7;
+        }
+        .box_resume span h1{
+            font-size: 48px;
+            margin-top: -55px;
+            font-weight: 800;
+            letter-spacing: normal;
+            color: #ededed;
+        }
+        .box_resume span h1 span{
+            font-size: 48px;
+            margin-top: -55px;
+            font-weight: 800;
+            color:#FFB400;
+            letter-spacing: normal;
+        }
+        
+        .box_title_left{
+            color: #ededed;
+            margin-left: 100px;
+            margin-top: 100px;
+            float: left;
+        }
+        .box_title_left h1{
+            padding-top: 10px;
+            font-size: 27px;
+        }
+        .box_title_left h2{
+            padding-top: 20px;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        
+        .box_address{
+            margin-top: 40px;
+        }
+        .box_address a i{
+            color: #FFB400;
+            font-size: 40px;
+            float: left;
+        }
+        .box_address h1{
+            font-size: 13px;
+            margin-left: 60px;
+            padding-top: 0px;
+        }
+        .box_address h2{
+            font-size: 11px;
+            margin-left: 60px;
+            margin-top: -17px;
+            line-height: 17px;
+        }
+        
+        .box_link_app{
+            margin-left: -200px;
+        }
+        .box_link_app ul li{
+            display: inline-block;
+            list-style: none;
+            margin-left: 5px;
+            margin-top: 40px;
+        }
+        .box_link_app ul li i{
+            color: white;
+            font-size: 18px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            border-radius: 90px;
+            background-color: #2b2b2b;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        .box_link_app ul li i:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        
+        .box_form{
+            margin-top: 100px;
+            margin-left: 500px;
+        }
+        .box_form .box_name_mail input{
+            margin-left: 30px;
+            width: 340px;
+            height: 45px;
+            border-radius: 100px;
+            background-color: #2b2b2b;
+            border: none;
+            padding-left: 30px;
+            color: #ededed;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .box_form .box_sub input{
+            margin-left: 30px;
+            margin-top: 30px;
+            width: 720px;
+            height: 45px;
+            border-radius: 100px;
+            background-color: #2b2b2b;
+            border: none;
+            padding-left: 30px;
+            color: #ededed;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .box_form .box_mss textarea{
+            margin-left: 30px;
+            margin-top: 30px;
+            width: 720px;
+            height: 225px;
+            border-radius: 30px;
+            background-color: #2b2b2b;
+            border: none;
+            padding-left: 30px;
+            padding-top: 20px;
+            color: #ededed;
+            font-size: 15px;
+            font-family: Poppins,sans-serif;
+            cursor: pointer;
+        }
+        
+        .box_icon{
+            margin-top: 100px;
+            position: fixed;
+            right: 30px;
+        }
+        .box_icon .fa{
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            margin-top: 17px;
+        }
+        .box_icon .fa-house{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-house:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-user{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-user:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-briefcase{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-briefcase:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-envelope-open{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-envelope-open:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-comments{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-comments:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon ul li{
+            list-style: none;
+        }
+        .fa-circle-half-stroke{
+            color: aliceblue;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            padding: 13.5px;
+            font-size: 22px;
+            position: fixed;
+            right: 30px;
+            top: 40px;
+        }
+        .fa-moon{
+            color: aliceblue;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            padding: 13.5px;
+            font-size: 22px;
+            position: fixed;
+            right: 30px;
+            top: 40px;
+        }
+        
+        
+        .box_form button span{
+            font-weight: 700;
+            font-size: 15px;
+            padding-right: 20px;
+            color: aliceblue;
+        }
+        .btn1{
+            position: relative;
+            margin-top: 23px;
+            margin-left: 40px;
+            width: 240px;
+            height: 58px;
+            border-radius: 30px;
+            border: 2px solid #FFB400;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box_form button .fa-paper-plane{
+            width: 56px;
+            height: 56px;
+            font-size: 20px;
+            border-radius: 90px;
+            background-color: #FFB400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: -43px;
+        }
+        #myBtn{
+            display: none;
+        }
+        .space{
+            margin-bottom: 80px;
+        }
+        @media only screen and ( max-width:600px) {
+            .box_resume{
+                text-align: center;
+                margin-top: 68px;
+            }
+            .box_resume span{
+                margin-left: -90px;
+                font-size: 55px;
+                font-weight: 800;
+                color: hsla(0,0%,100%,.07);
+                letter-spacing: 1px;
+                line-height: .7;
+            }
+            .box_resume span h1{
+                font-size: 28px;
+                margin-top: -35px;
+                font-weight: 800;
+                letter-spacing: normal;
+                color: #ededed;
+                margin-left: -135px;
+            }
+            .box_resume span h1 span{
+                font-size: 28px;
+                margin-top: -55px;
+                margin-left: 0px;
+                font-weight: 800;
+                color:#FFB400;
+                letter-spacing: normal;
+            }
+        
+            .box_icon{
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #2b2a2a;
+                position: fixed;
+                overflow: hidden;
+            }
+            .box_icon ul li{
+                display: inline-block;
+            }
+            .box_icon .fa{
+                margin-left: 19px;
+                margin-bottom: 15px;
+                width:52px;
+                height:52px;
+                background-color: #444444;
+            }
+            .fa-circle-half-stroke{
+                color: aliceblue;
+                width: 50px;
+                height: 50px;
+                border-radius: 90px;
+                background-color: #2b2a2a;
+                padding: 13.5px;
+                font-size: 22px;
+                position: fixed;
+                right: 15px;
+                top: 40px;
+            }
+            .fa-moon{
+                color: aliceblue;
+                width: 50px;
+                height: 50px;
+                border-radius: 90px;
+                background-color: #2b2a2a;
+                padding: 13.5px;
+                font-size: 22px;
+                position: fixed;
+                right: 15px;
+                top: 40px;
+            }
+        
+            .box_title_left{
+                color: #ededed;
+                margin-left: 20px;
+                margin-top: 100px;
+            }
+            .box_title_left h1{
+                padding-top: 10px;
+                font-size: 27px;
+            }
+            .box_title_left h2{
+                padding-top: 20px;
+                font-size: 15px;
+                line-height: 22px;
+            }
+            
+            .box_address{
+                margin-top: 40px;
+            }
+            .box_address a i{
+                color: #FFB400;
+                font-size: 40px;
+                float: left;
+            }
+            .box_address h1{
+                font-size: 13px;
+                margin-left: 60px;
+                padding-top: 0px;
+            }
+            .box_address h2{
+                font-size: 11px;
+                margin-left: 60px;
+                margin-top: -17px;
+                line-height: 17px;
+            }
+            
+            .box_link_app{
+                margin-left: 0px;
+            }
+            .box_link_app ul li{
+                display: inline-block;
+                list-style: none;
+                margin-left: 5px;
+                margin-top: 40px;
+            }
+            .box_link_app ul li i{
+                color: white;
+                font-size: 18px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                border-radius: 90px;
+                background-color: #2b2b2b;
+                transition: 0.4s;
+                cursor: pointer;
+            }
+            .box_link_app ul li i:hover{
+                background-color: #FFB400;
+                transition: 0.4s;
+            }
+            
+            .box_form{
+                margin-top: 100px;
+                margin-left: 00px;
+            }
+            .box_form .box_name_mail input{
+                margin-left: 20px;
+                margin-top: 20px;
+                width: 340px;
+                height: 45px;
+                border-radius: 100px;
+                background-color: #2b2b2b;
+                border: none;
+                padding-left: 30px;
+                color: #ededed;
+                font-size: 15px;
+                cursor: pointer;
+            }
+            .box_form .box_sub input{
+                margin-left: 20px;
+                margin-top: 20px;
+                width: 340px;
+                height: 45px;
+                border-radius: 100px;
+                background-color: #2b2b2b;
+                border: none;
+                padding-left: 30px;
+                color: #ededed;
+                font-size: 15px;
+                cursor: pointer;
+            }
+            .box_form .box_mss textarea{
+                margin-left: 20px;
+                margin-top: 20px;
+                width: 340px;
+                height: 225px;
+                border-radius: 30px;
+                background-color: #2b2b2b;
+                border: none;
+                padding-left: 30px;
+                padding-top: 20px;
+                color: #ededed;
+                font-size: 15px;
+                font-family: Poppins,sans-serif;
+                cursor: pointer;
+            }
+            .btn1{
+                margin-left: 70px;
+            }
+            .space{
+                margin-bottom: 110px;
+            }
+        
+        
+            /*croll up button*/
+        #myBtn {
+            display: block;
+            position: fixed;
+            bottom: 100px;
+            right: 10px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 55px;
+            height: 55px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+          }
+          html{
+            scroll-behavior: smooth;
+          }
+          #myBtn:hover {
+            background-color: #FFB400;
+          }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-upload"></i></button>
+        <div class="box_icon">
+            <div class="box_icon">
+                <ul>
+                    <li><a href="https://chentha.github.io/chenthakh/"><i class="fa fa-house"></i></a></li>
+                    <li><a href="/about/index1.html"><i class="fa fa-user"></i></a></li>
+                    <li><a href=""><i class="fa fa-briefcase"></i></a></li>
+                    <li><a href="/index3.html"><i class="fa fa-envelope-open"></i></a></li>
+                    <li><a href=""><i class="fa fa-comments"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_resume">
+            <span>
+                <span>CONTACT</span>
+                <h1>GET IN <span>TOUCH</span></h1>
+            </span>
+        </div>
+        <div class="box_title_left">
+            <h1>DON'T BE SHY !</h1>
+            <h2>Feel free to get in touch with me. I am always open <br> to discussing new projects, creative ideas or <br>
+                opportunities to be part of your visions.</h2>
+            <div class="box_address">
+                <a href="#"><i class="fa-solid fa-map"></i></a>
+                <h1>ADDRESS POINT</h1>
+                <h2>N8 St21BT , Sangkat Boeung Tumpun1 , Khan<br> Meanchey , Phnom Penh,....</h2>
+            </div>
+
+            <div class="box_address">
+                <a href="#"><i class="fa-solid fa-envelope-open"></i></a>
+                <h1>MAIL ME</h1>
+                <h2>hourchentha00@gmail.com</h2>
+            </div>
+
+            <div class="box_address">
+                <a href="#"><i class="fa-solid fa-square-phone"></i></a>
+                <h1>CELL ME</h1>
+                <h2>+855 78818433</h2>
+            </div>
+            <div class="box_link_app">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100082244558531&mibextid=LQQJ4d"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://t.me/Hour_chentha"><i class="fa-brands fa-telegram"></i></a></li>
+                    <li><a href="https://www.instagram.com/chenthahour/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://chenthatechnology.blogspot.com/"><i class="fa-solid fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_form">
+            <div class="box_name_mail">
+                <input type="text" placeholder="YOUR NAME">
+                <input type="email" placeholder="YOUR EMAIL">
+            </div>
+            <div class="box_sub">
+                <input type="text" placeholder="YOUR SUBJECT">
+            </div>
+            <div class="box_mss">
+                <textarea name="text" placeholder="YOUR MESSAGE" required=""></textarea>
+            </div>
+            <button class="btn1"> <span>MORE ABOUT ME</span> <i class="fa-regular fa-paper-plane"></i>></button>
+        </div>
+        <div class="space"></div>
+    </div>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
